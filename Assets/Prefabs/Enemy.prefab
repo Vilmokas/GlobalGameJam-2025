@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1712201291762223170}
   - component: {fileID: 6195992968710310182}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,9 +98,11 @@ GameObject:
   - component: {fileID: 3484619945797612833}
   - component: {fileID: 5462693562340255532}
   - component: {fileID: 3075616613003712252}
-  m_Layer: 0
+  - component: {fileID: 315440738925576283}
+  - component: {fileID: 4150689170345949844}
+  m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,3 +173,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   target: {fileID: 0}
+--- !u!114 &315440738925576283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5133685913240223120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65012f0387e776c44b083490253963c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+--- !u!114 &4150689170345949844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5133685913240223120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be39909c3637614c9dc9dc9541dfddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
