@@ -1,2 +1,13 @@
-# GlobalGameJam-2025
-Unity game files for Global Game Jam 2025 game project
+# Game for Global Game Jam 2025
+
+![cover](TBD)
+
+## Theme: Bubble
+
+## Game Page:
+
+[TBD](TBD)
+
+## Trailer:
+
+[Global Game Jam 2025 - TBD](https://www.youtube.com/@vilmokasTBD)
