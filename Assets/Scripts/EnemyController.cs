@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
+    public Transform target;
 
     private void FixedUpdate()
     {
@@ -11,6 +12,6 @@ public class EnemyController : MonoBehaviour
 
     void MoveToTarget()
     {
-        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+        transform.Translate((target.position - transform.position).normalized * moveSpeed * Time.deltaTime);
     }
 }
