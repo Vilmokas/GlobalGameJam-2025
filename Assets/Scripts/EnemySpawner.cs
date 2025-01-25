@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(SpawnEnemies());
     }
 
-    IEnumerator SpawnEnemies()
+    public IEnumerator SpawnEnemies()
     {
         for (int i = 0; i < roundEnemyCount[currentRound]; i++)
         {
