@@ -173,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   nextPointThreshold: 0.1
+  pointsToGiveOnDeath: 1
   pathPoints: []
 --- !u!114 &315440738925576283
 MonoBehaviour:
@@ -189,10 +190,10 @@ MonoBehaviour:
   deathEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5133685913240223120}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 3075616613003712252}
+        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+        m_MethodName: DestroyEnemy
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
