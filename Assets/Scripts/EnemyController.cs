@@ -3,7 +3,9 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
-    public Transform target;
+    [SerializeField] float nextPointThreshold = 0.1f;
+    public Transform[] pathPoints;
+    int currentPathPoint = 0;
 
     private void FixedUpdate()
     {
@@ -12,6 +14,7 @@ public class EnemyController : MonoBehaviour
 
     void MoveToTarget()
     {
-        transform.Translate((target.position - transform.position).normalized * moveSpeed * Time.deltaTime);
+        transform.Translate((pathPoints[currentPathPoint].position - transform.position).normalized * moveSpeed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, pathPoints[currentPathPoint].position) <= nextPointThreshold) currentPathPoint++;
     }
 }
