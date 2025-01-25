@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] UnityEvent deathEvent;
     [SerializeField] float health;
 
     public void TakeDamage(float damage)
@@ -11,12 +13,7 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
-            Die();
+            deathEvent?.Invoke();
         }
-    }
-
-    void Die()
-    {
-        Destroy(gameObject);
     }
 }
