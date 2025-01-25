@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -6614039930811935483, guid: 249c2e81c9c82bb45b26b00433c7f05e, type: 3}
+  m_Sprite: {fileID: -5457111709289692277, guid: 106a133284d03d6438f74a442ef11f53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -112,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 6715587422436151148}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17, y: 0.73, z: 0}
+  m_LocalPosition: {x: -0.48, y: 0.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 3548041766819640722}
   - component: {fileID: 1167430802542912422}
   m_Layer: 9
-  m_Name: Turret
+  m_Name: Turret 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,8 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1677485257945032577, guid: fece8045990dab84d8ed1f72ff017a27, type: 3}
   shootPosition: {fileID: 7424274159167551103}
-  damage: 1
-  shootDelay: 1
+  damage: 3
+  shootDelay: 0.5
   targets: []
 --- !u!58 &3548041766819640722
 CircleCollider2D:
@@ -206,7 +206,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2
+  m_Radius: 5
 --- !u!50 &1167430802542912422
 Rigidbody2D:
   serializedVersion: 5
