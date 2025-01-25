@@ -7,8 +7,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float enemySpawnDelay;
     [SerializeField] Transform[] enemyPathPoints;
 
-    private int currentRound = 0;
-    [SerializeField] int[] roundEnemyCount = { 10, 2 };
+    public int currentRound = 0;
+    public int[] roundEnemyCount = { 10, 20 };
 
     public void StartRound()
     {

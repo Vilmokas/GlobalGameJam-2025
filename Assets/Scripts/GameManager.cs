@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject turretShopWindow;
     [SerializeField] TextMeshProUGUI modeText;
     [SerializeField] GameObject endGameWindow;
+    [SerializeField] GameObject winGameWindow;
     bool isGameRunning = true;
     bool isBuildMode = true;
     float timeRemaining = 0;
@@ -35,6 +36,14 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0.0f;
     }
 
+    public void WinGame()
+    {
+        winGameWindow.SetActive(true);
+        isGameRunning = false;
+        StopCoroutine(StartGame());
+        Time.timeScale = 0.0f;
+    }
+
     IEnumerator StartGame()
     {
         while (isGameRunning)
@@ -48,6 +57,7 @@ public class GameManager : MonoBehaviour
             enemyManager.StartRound();
             timeRemaining = Time.time + defendRoundTime;
             yield return new WaitForSeconds(defendRoundTime);
+            if (enemyManager.currentRound >= enemyManager.roundEnemyCount.Length) WinGame();
         }
     }
 
