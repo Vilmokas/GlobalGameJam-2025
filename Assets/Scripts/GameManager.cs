@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             enemyManager.StartRound();
             timeRemaining = Time.time + defendRoundTime;
             yield return new WaitForSeconds(defendRoundTime);
-            if (enemyManager.currentRound >= enemyManager.roundEnemyCount.Length) WinGame();
+            if (enemyManager.currentRound >= enemyManager.roundEnemyCountNormal.Length) WinGame();
         }
     }
 

@@ -22,6 +22,6 @@ public class EnemyController : MonoBehaviour
     public void DestroyEnemy()
     {
         GameObject.Find("TurretSpawner").GetComponent<TurretSpawner>().AddCurrency(pointsToGiveOnDeath);
-        Destroy(gameObject);
+        Destroy(gameObject, 0.175f);
     }
 }
