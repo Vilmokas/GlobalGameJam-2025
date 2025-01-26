@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class TurretController : MonoBehaviour
@@ -11,6 +12,8 @@ public class TurretController : MonoBehaviour
     float lastShotTime = 0f;
     bool isPlaced = false;
     [SerializeField] List<GameObject> targets;
+    [SerializeField] UnityEvent shootEvent;
+    [SerializeField] UnityEvent turretPlacedEvent;
 
     void Update()
     {
@@ -27,7 +30,11 @@ public class TurretController : MonoBehaviour
         newPosition.z = 0f;
         transform.position = newPosition;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0)) isPlaced = true;
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            isPlaced = true;
+            turretPlacedEvent?.Invoke();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,5 +58,6 @@ public class TurretController : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab, shootPosition.position, Quaternion.identity);
         projectile.GetComponent<ProjectileController>().direction = (targets[0].transform.position - shootPosition.position).normalized;
         projectile.GetComponent<Damage>().damage = damage;
+        shootEvent?.Invoke();
     }
 }
