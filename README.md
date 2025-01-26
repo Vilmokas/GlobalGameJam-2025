@@ -1,6 +1,6 @@
 # Game for Global Game Jam 2025
 
-![cover](https://i.imgur.com/57rqpsI.png)
+![cover](https://i.imgur.com/QvTXPtr.png)
 
 ## Theme: Bubble
 
@@ -10,4 +10,4 @@
 
 ## Trailer:
 
-[Global Game Jam 2025 - Not In The Eyes](https://www.youtube.com/@vilmokas)
+[Global Game Jam 2025 - Not In The Eyes](https://www.youtube.com/watch?v=SQjSRQ3tUb0)
